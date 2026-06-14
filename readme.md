@@ -6,9 +6,9 @@
 
 ## 🚧 Project Status
 
-**Current Stage:** Data Understanding, Data Cleaning, and Feature Engineering
+**Current Stage:** SQL Analytics Completed | Preparing for EDA & Power BI Dashboard Development
 
-This project is currently under development and follows a structured analytics workflow from raw nutritional data to business intelligence dashboards and health recommendations.
+This project follows a complete analytics workflow from raw nutritional data to health intelligence and interactive business dashboards.
 
 ---
 
@@ -24,12 +24,12 @@ This project is currently under development and follows a structured analytics w
 
 The goal of this project is to:
 
-- Analyze food nutritional information
-- Create meaningful health risk metrics
-- Identify healthy and risky food patterns
-- Perform SQL-based analytical queries
-- Build interactive Power BI dashboards
-- Generate data-driven health insights
+* Analyze food nutritional composition
+* Create custom health-related metrics
+* Identify healthy and high-risk food patterns
+* Perform SQL-based analytical exploration
+* Build interactive Power BI dashboards
+* Generate actionable nutrition insights
 
 ---
 
@@ -44,6 +44,9 @@ Food/
 │   ├── data-understanding-and-cleaning.ipynb
 │   └── feature-engineering.ipynb
 │
+├── sql/
+│   └── nutrition_analysis.sql
+│
 ├── Workflow/
 │   └── Food-Health-Risk-Workflow.png
 │
@@ -54,157 +57,207 @@ Food/
 
 ## 📊 Dataset
 
-The dataset contains nutritional information for various food items.
+The dataset contains nutritional information for more than 1,000 food items.
 
 ### Available Features
 
-- Food Item
-- Energy (kcal)
-- Carbohydrates
-- Protein
-- Fat
-- Free Sugar
-- Fibre
-- Cholesterol
-- Calcium
+| Column             | Category                   |
+| ------------------ | -------------------------- |
+| food_item          | Identifier                 |
+| energy_kcal        | Context Dependent          |
+| carbs              | Context Dependent          |
+| protein_g          | Positive                   |
+| fat_g              | Negative When High         |
+| free_sugar_g       | Negative When High         |
+| fibre_g            | Positive                   |
+| cholesterol_mg     | Negative When High         |
+| calcium_mg         | Positive                   |
+| nutrition_density  | Engineered Positive Metric |
+| health_risk_score  | Engineered Negative Metric |
+| is_spice_condiment | Analytical Flag            |
+
+---
+
+## ⚙️ Feature Engineering Implemented
+
+### Nutrition Density
+
+A custom metric designed to evaluate nutritional quality using:
+
+* Protein
+* Fibre
+* Calcium
+* Sugar
+* Fat
+* Calories
+* Cholesterol
+
+Higher values indicate better nutritional quality.
+
+---
+
+### Health Risk Score
+
+A custom metric designed to estimate potential health risk using:
+
+* Free Sugar
+* Fat
+* Calories
+* Cholesterol
+* Protein
+* Fibre
+
+Higher values indicate higher health risk.
+
+---
+
+### Additional Features
+
+#### Spice / Condiment Classification
+
+A binary flag:
+
+```text
+is_spice_condiment
+```
+
+was created to prevent spices and seasoning blends from distorting nutritional rankings due to per-100g measurements.
+
+---
+
+## 🗄️ SQL Analytics Completed
+
+A total of 15 business-focused SQL analyses were performed, including:
+
+* Highest Protein Foods
+* Most Nutrient Dense Foods
+* Highest Health Risk Foods
+* Highest Sugar Foods
+* High Fat & High Sugar Foods
+* High Nutrition, Low Risk Foods
+* Calcium-Rich Low-Risk Foods
+* High Fibre, Low Sugar Foods
+* High Protein, Low Risk Foods
+* Lowest Health Risk Foods
+* Best Protein-to-Calorie Ratio Foods
+* Health Risk Distribution Analysis
+* Above-Average Healthy Foods
+* Overall Healthiest Foods Ranking
+
+All SQL queries are available in:
+
+```text
+sql/nutrition_analysis.sql
+```
 
 ---
 
 ## ✅ Progress Tracker
 
 ### Phase 1: Data Understanding
-- [x] Dataset Exploration
-- [x] Column Analysis
-- [x] Statistical Summary
+
+* [x] Dataset Exploration
+* [x] Column Analysis
+* [x] Statistical Summary
 
 ### Phase 2: Data Cleaning
-- [x] Missing Value Analysis
-- [x] Duplicate Detection
-- [x] Data Standardization
+
+* [x] Missing Value Analysis
+* [x] Duplicate Detection
+* [x] Data Standardization
 
 ### Phase 3: Feature Engineering
-- [x] Health Risk Score Creation
-- [x] Nutrition Density Score Creation
-- [x] Risk Category Generation
-- [x] Nutrition Category Generation
 
-### Phase 4: Exploratory Data Analysis
-- [ ] Nutrient Distribution Analysis
-- [ ] Correlation Analysis
-- [ ] Health Risk Insights
-- [ ] Nutrition Insights
+* [x] Nutrition Density Score
+* [x] Health Risk Score
+* [x] Risk Categorization
+* [x] Spice/Condiment Classification
 
-### Phase 5: Database Integration
-- [ ] MySQL Database Setup
-- [ ] Data Import
-- [ ] Table Design
+### Phase 4: Database Integration
 
-### Phase 6: SQL Analytics
-- [ ] Top Risky Foods Analysis
-- [ ] Top Healthy Foods Analysis
-- [ ] Protein Analysis
-- [ ] Sugar Analysis
-- [ ] Nutrition Category Analysis
+* [x] MySQL Database Setup
+* [x] Data Import
+* [x] SQL Query Development
+
+### Phase 5: SQL Analytics
+
+* [x] Business Questions Analysis
+* [x] Health Risk Exploration
+* [x] Nutritional Insights Generation
+* [x] Healthy Food Ranking
+
+### Phase 6: Exploratory Data Analysis
+
+* [ ] Nutrient Distribution Analysis
+* [ ] Correlation Analysis
+* [ ] Outlier Detection
+* [ ] Statistical Insights
 
 ### Phase 7: Power BI Dashboard
-- [ ] KPI Dashboard
-- [ ] Health Risk Dashboard
-- [ ] Nutrition Dashboard
-- [ ] Interactive Filtering
+
+* [ ] KPI Dashboard
+* [ ] Health Risk Dashboard
+* [ ] Nutrition Dashboard
+* [ ] Interactive Filters
 
 ### Phase 8: Insights & Recommendations
-- [ ] Business Insights
-- [ ] Health Recommendations
-- [ ] Final Report
 
----
-
-## ⚙️ Feature Engineering Implemented
-
-### Health Risk Score
-
-A custom score designed to estimate potential health risks using nutritional attributes such as:
-
-- Calories
-- Fat
-- Free Sugar
-- Cholesterol
-
-### Nutrition Density Score
-
-A metric developed to evaluate nutritional quality using:
-
-- Protein
-- Fibre
-- Calcium
-
-### Categories Created
-
-#### Risk Categories
-
-- Low Risk
-- Medium Risk
-- High Risk
-
-#### Nutrition Categories
-
-- Nutrient Dense
-- Moderately Nutritious
-- Less Nutritious
+* [ ] Dashboard Insights
+* [ ] Health Recommendations
+* [ ] Final Report
 
 ---
 
 ## 🔜 Upcoming Work
 
-The next steps in the project are:
-
 1. Exploratory Data Analysis (EDA)
 2. Correlation Analysis
-3. MySQL Integration
-4. SQL Business Queries
-5. Power BI Dashboard Development
-6. Insight Generation
+3. Power BI Dashboard Development
+4. Health Risk Visualization
+5. Nutrition Intelligence Dashboard
+6. Final Recommendations & Reporting
 
 ---
 
 ## 🛠️ Tech Stack
 
 ### Data Processing
-- Python
-- Pandas
-- NumPy
 
-### Visualization
-- Matplotlib
-- Seaborn
+* Python
+* Pandas
+* NumPy
 
 ### Database
-- MySQL
 
-### Analytics
-- SQL
+* MySQL
+* SQL
 
-### Dashboarding
-- Power BI
+### Visualization
 
-### Development Environment
-- PyCharm
-- Jupyter Notebook
+* Matplotlib
+* Seaborn
+* Power BI
+
+### Development
+
+* Jupyter Notebook
+* Git
+* GitHub
 
 ---
 
 ## 📅 Development Roadmap
 
-| Stage | Status |
-|---------|---------|
-| Data Understanding | ✅ Completed |
-| Data Cleaning | ✅ Completed |
-| Feature Engineering | ✅ Completed |
-| Exploratory Data Analysis | 🔄 In Progress |
-| MySQL Integration | ⏳ Planned |
-| SQL Analytics | ⏳ Planned |
-| Power BI Dashboard | ⏳ Planned |
-| Final Insights | ⏳ Planned |
+| Stage                      | Status         |
+| -------------------------- | -------------- |
+| Data Understanding         | ✅ Completed    |
+| Data Cleaning              | ✅ Completed    |
+| Feature Engineering        | ✅ Completed    |
+| MySQL Integration          | ✅ Completed    |
+| SQL Analytics              | ✅ Completed    |
+| Exploratory Data Analysis  | 🔄 In Progress |
+| Power BI Dashboard         | ⏳ Planned      |
+| Final Insights & Reporting | ⏳ Planned      |
 
 ---
 
@@ -212,9 +265,9 @@ The next steps in the project are:
 
 **Samhoon**
 
-Data Analytics | SQL | Power BI | Python
+Aspiring Data Analyst | Python | SQL | Power BI
 
-Building an end-to-end analytics project focused on nutrition intelligence and health risk assessment.
+Building an end-to-end analytics project focused on nutrition intelligence, health risk assessment, and data-driven decision making.
 
 ---
 
