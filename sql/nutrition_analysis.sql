@@ -41,9 +41,6 @@ LIMIT 10;
 -- 5. Which foods are high in both fat and sugar?
 -- Insight: Identifies highly processed and calorie-dense foods linked to poor health outcomes.
 
--- 5. Which foods are high in both fat and sugar?
--- Insight: Identifies highly processed and calorie-dense foods linked to poor health outcomes.
-
 SELECT food_item,
        fat_g,
        free_sugar_g,
