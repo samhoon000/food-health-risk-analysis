@@ -4,11 +4,11 @@
 
 ---
 
-## 🚧 Project Status
+## ✅ Project Status
 
-**Current Stage:** Power BI Dashboard Completed | EDA and Insight Generation In Progress
+**Current Stage:** Completed
 
-This project follows a complete analytics workflow from raw nutritional data to health intelligence and interactive business dashboards.
+This project successfully follows a complete end-to-end analytics workflow, transforming raw nutritional data into actionable health insights through feature engineering, SQL analysis, and interactive Power BI dashboards.
 
 ---
 
@@ -61,6 +61,12 @@ Food/
 │
 ├── sql/
 │   └── nutrition_analysis.sql
+│
+├── report/
+│   └── Food_Nutrition_Health_Risk_Report.pdf
+│
+├── presentation/
+│   └── Food_Nutrition_Health_Risk_Presentation.pptx
 │
 ├── Workflow/
 │   └── Food-Health-Risk-Workflow.png
@@ -143,22 +149,19 @@ was created to prevent spices and seasoning blends from distorting nutritional r
 
 ## 🗄️ SQL Analytics Completed
 
-A total of 15 business-focused SQL analyses were performed, including:
+A total of 14 business-focused SQL analyses were performed, including:
 
-* Highest Protein Foods
-* Most Nutrient Dense Foods
+* Most Nutrient-Dense Foods
 * Highest Health Risk Foods
-* Highest Sugar Foods
-* High Fat & High Sugar Foods
-* High Nutrition, Low Risk Foods
-* Calcium-Rich Low-Risk Foods
-* High Fibre, Low Sugar Foods
-* High Protein, Low Risk Foods
-* Lowest Health Risk Foods
-* Best Protein-to-Calorie Ratio Foods
+* High Fibre & Low Sugar Foods
+* High Protein & Low Risk Foods
 * Health Risk Distribution Analysis
-* Above-Average Healthy Foods
 * Overall Healthiest Foods Ranking
+* Protein-to-Calorie Analysis
+* High Fat & High Sugar Foods
+* Calcium-Rich Low-Risk Foods
+* Above-Average Healthy Foods
+* And additional nutrition-focused analyses
 
 All SQL queries are available in:
 
@@ -197,11 +200,12 @@ The completed dashboard includes:
 
 ## 📊 Key Insights Generated
 
-* Majority of foods fall under the Low Risk category.
-* Nutrition Density generally decreases as Health Risk Score increases.
-* Spices and condiments significantly influence nutritional rankings.
-* Several processed foods exhibit extremely high health risk scores.
-* Traditional spice blends and condiments rank among the healthiest food items based on nutritional density.
+* Maa Chaane Ki Dal ranked as the healthiest food overall based on Nutrition Density and Health Risk Score.
+* Cracked Wheat & Green Gram Dal Premix consistently appeared among the top-performing foods.
+* Foods rich in pulses, legumes, and whole grains generally achieved the highest nutrition density scores.
+* Butter Icing, Glace Icing, and Royal Icing were identified as the highest-risk foods due to their high sugar and fat content.
+* 662 foods were classified as Low Risk, 346 as Medium Risk, and only 12 as High Risk.
+* High-fibre and protein-rich foods consistently demonstrated better nutritional profiles and lower health risks.
 
 ---
 
@@ -241,10 +245,10 @@ The completed dashboard includes:
 
 ### Phase 6: Exploratory Data Analysis
 
-* [ ] Nutrient Distribution Analysis
-* [ ] Correlation Analysis
-* [ ] Outlier Detection
-* [ ] Statistical Insights
+* [x] Nutrient Distribution Analysis
+* [x] Correlation Analysis
+* [x] Outlier Detection
+* [x] Statistical Insights
 
 ### Phase 7: Power BI Dashboard
 
@@ -256,22 +260,29 @@ The completed dashboard includes:
 * [x] Top Healthy Foods Analysis
 * [x] Top High-Risk Foods Analysis
 
-### Phase 8: Insights & Recommendations
+### Phase 8: Insights & Reporting
 
-* [ ] Dashboard Insights
-* [ ] Health Recommendations
-* [ ] Final Report
+* [x] Dashboard Insights
+* [x] Health Recommendations
+* [x] Final Report
+* [x] Project Documentation
 
 ---
 
-## 🔜 Upcoming Work
+## 📄 Project Deliverables
 
-1. Exploratory Data Analysis (EDA)
-2. Correlation Analysis
-3. Dashboard Insight Generation
-4. Nutrition Intelligence Reporting
-5. Health Risk Recommendations
-6. Final Project Documentation
+The project includes:
+
+* Processed Nutrition Dataset
+* Feature Engineering Pipeline
+* MySQL Database Integration
+* SQL Analytics Queries
+* Interactive Power BI Dashboard
+* Project Report
+* Project Presentation
+* GitHub Documentation
+
+This repository demonstrates an end-to-end Data Analytics workflow from data preparation to insight generation and dashboard reporting.
 
 ---
 
@@ -302,29 +313,14 @@ The completed dashboard includes:
 
 ---
 
-## 📅 Development Roadmap
-
-| Stage                      | Status         |
-| -------------------------- | -------------- |
-| Data Understanding         | ✅ Completed    |
-| Data Cleaning              | ✅ Completed    |
-| Feature Engineering        | ✅ Completed    |
-| MySQL Integration          | ✅ Completed    |
-| SQL Analytics              | ✅ Completed    |
-| Exploratory Data Analysis  | 🔄 In Progress |
-| Power BI Dashboard         | ✅ Completed    |
-| Final Insights & Reporting | ⏳ Planned      |
-
----
-
 ## 👨‍💻 Author
 
-**Samhoon**
+**Abdul Samhoon**
 
 Aspiring Data Analyst | Python | SQL | Power BI
 
-Building an end-to-end analytics project focused on nutrition intelligence, health risk assessment, and data-driven decision making.
+Building data-driven solutions through analytics, visualization, and business intelligence.
 
 ---
 
-⭐ Project currently under active development.
+⭐ Completed end-to-end Data Analytics portfolio project showcasing Python, SQL, MySQL, and Power BI skills.
